@@ -13,6 +13,6 @@ public class Eggs {
 
         numEggs = dozenEggs + singleEgg;
 
-        System.out.println("You ordered " + numEggs + "."
+        System.out.println("You ordered " + numEggs + " eggs. That's");
     }
 }
