@@ -3,20 +3,23 @@ import java.util.Scanner;
 public class Eggs {
     public static void main(String[] args){
 
-        double dozenEggs = 3.25;
+        double dozenPrice = 3.25;
+        double singlePrice = .45;
+        double eggs;
+
         int DozenEggs = 12;
-        int SingleEggs = 1;
-        double singleEgg = .45;
-        double numEggs;
+        int dozen;
+        int leftOver;
+        double Total;
 
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Enter the number of eggs you want to buy >>> ");
-        numEggs = keyboard.nextInt();
+        eggs = keyboard.nextInt();
+        dozen = (int) (eggs / DozenEggs);
+        leftOver = (int) (eggs % DozenEggs);
+        Total = dozen * dozenPrice + leftOver * singlePrice;
 
-
-
-        numEggs = dozenEggs + singleEgg;
-
-        System.out.println("You ordered " + numEggs + " eggs. That's");
+        System.out.println("The total dozen you ordered is " + dozen + " eggs. The eggs left over are "
+                + leftOver + " The total amount is " + Total );
     }
 }
